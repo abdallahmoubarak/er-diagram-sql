@@ -15,3 +15,18 @@ Oscar(movie_id, person_id, type, year)
 ● Find the Best-Picture winner with the best/smallest earnings rank. The
 result should have the form (name, earnings_rank). Assume no two movies
 have the same earnings rank.
+
+2- Convert the below DB schema to an ER Diagram and write the following SQL
+queries (the underlined attribute represents the PK):
+Student(id, name)
+Department(id, name, office)
+Room(id, name, capacity)
+Course(crn, name, start_time, end_time, room_id)
+MajorsIn(student_id, dept_name)
+Enrolled(student_id, course_name, credit_status)
+
+creating movies_db
+<img src='./src/movies_db.png' alt=''>
+
+creating university_db
+<img src='./src/university_db.png' alt=''>
