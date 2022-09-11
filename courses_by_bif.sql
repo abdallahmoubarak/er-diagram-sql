@@ -1,5 +1,7 @@
-SELECT course_name
-FROM enrolleds, majorsins, courses, students
-WHERE students.id = majorsins.student_id
-AND majorsins.dept_name = 'BIF'
-AND courses.name = enrolleds.course_crn;
+SELECT *
+FROM courses 
+WHERE courses.crn IN (
+        SELECT majorsIns.student_id 
+        FROM majorsIns
+        WHERE majorsIns.dept_id = (SELECT id FROM departments WHERE name='BIF')
+    )
