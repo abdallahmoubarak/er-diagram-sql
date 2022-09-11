@@ -1,5 +1,5 @@
 SELECT course_name
-FROM enrolleds, majorsIns, courses, students
-WHERE students.id = majorsIns.student_id
-AND majorsIns.dept_name = 'BIF'
+FROM enrolleds, majorsins, courses, students
+WHERE students.id = majorsins.student_id
+AND majorsins.dept_name = 'BIF'
 AND courses.name = enrolleds.course_crn;
